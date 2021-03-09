@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12" style="text-align: center;">
+      <h1>Rent Invoice<span class="caret"></span></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 col-sm-5 col-xs-5">
+      <div class="input-group mb-3">
+        <div class="input-group-addon">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Name</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Default"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="input-group mb-3">
+        <div class="input-group-addon">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Date</span
+          >
+        </div>
+        <input
+          type="date"
+          class="form-control"
+          aria-label=""
+        />
+      </div>
+    </div>
+  </div>
+  <hr />
+  <!-- Header -->
+  <div class="row">
+    <div class="col-md-5 col-sm-5 col-xs-5" style="text-align: center;">
+      <label>Details</label><br />
+      <input type="text" value="Rent:" class="form-control" /> <br />
+      <input type="text" value="Electricty:" class="form-control" /> <br />
+      <input type="text" value="Water Pump:" class="form-control" /> <br />
+      <input type="text" value="Extra:" class="form-control" /> <br />
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+      <label>Amount</label><br />
+      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "rent"/>
+      <br />
+      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "electricity"/>
+      <br />
+      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "pump"/>
+      <br />
+      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "extra"/>
+      <br />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <span class="input-group-text">Comment</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-xs-6"></div>
+    <div class="col-sm-6 col-md-6 col-xs-6">
+      <div class="input-group mb-3">
+        <div class="input-group-btn">
+          <button class="btn btn-outline-success" type="button" (click)="onClickTotal()" >Total</button>
+        </div>
+        <input type="text" class="form-control"  [(ngModel)]= "totalAmount" placeholder="" aria-label="Large" aria-describedby="inputGroup-sizing-sm" style="text-align: center;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
