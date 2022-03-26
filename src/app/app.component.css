@@ -1,0 +1,10 @@
+.input-fields{
+    width: 110px;
+    background-color: whitesmoke;
+}
+.input-fields.comment{
+    height:65px 
+}
+.input-style{
+    text-align: center;
+}
