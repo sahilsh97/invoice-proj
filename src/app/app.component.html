@@ -1,16 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-xs-12" style="text-align: center;">
+    <div class="col-sm-12 col-md-12 col-xs-12" style="text-align: center">
       <h1>Rent Invoice<span class="caret"></span></h1>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5 col-sm-5 col-xs-5">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <div class="input-group mb-3">
         <div class="input-group-addon">
-          <span class="input-group-text" id="inputGroup-sizing-default"
-            >Name</span
-          >
+          <span class="input-group-text input-fields">Name</span>
         </div>
         <input
           type="text"
@@ -20,50 +18,116 @@
         />
       </div>
     </div>
-    <div class="col-md-3 col-sm-3 col-xs-3"></div>
-    <div class="col-md-4 col-sm-4 col-xs-4">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <div class="input-group mb-3">
         <div class="input-group-addon">
-          <span class="input-group-text" id="inputGroup-sizing-default"
-            >Date</span
-          >
+          <span class="input-group-text input-fields">Date</span>
         </div>
-        <input
-          type="date"
-          class="form-control"
-          aria-label=""
-        />
+        <input type="date" class="form-control" aria-label="" />
       </div>
     </div>
   </div>
   <hr />
   <!-- Header -->
   <div class="row">
-    <div class="col-md-5 col-sm-5 col-xs-5" style="text-align: center;">
-      <label>Details</label><br />
-      <input type="text" value="Rent:" class="form-control" /> <br />
-      <input type="text" value="Electricty:" class="form-control" /> <br />
-      <input type="text" value="Water Pump:" class="form-control" /> <br />
-      <input type="text" value="Extra:" class="form-control" /> <br />
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Rent</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="rent"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Sweeper</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="sweeperAmount"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Water</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="water"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Extra</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="extra"
+        />
+        <br />
+      </div>
     </div>
-    <div class="col-md-3 col-sm-3 col-xs-3"></div>
-    <div class="col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
-      <label>Amount</label><br />
-      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "rent"/>
-      <br />
-      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "electricity"/>
-      <br />
-      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "pump"/>
-      <br />
-      <input type="number" class="form-control" style="text-align: center;" [(ngModel)]= "extra"/>
-      <br />
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Current Units</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="currentUnits"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">New units</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="newUnits"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Unit Rate</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="unitRate"
+        />
+        <br />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text input-fields">Electricty</span>
+        </div>
+        <input
+          type="number"
+          class="form-control input-style"
+          [(ngModel)]="electricity"
+        />
+        <br />
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-12 col-xs-12">
       <div class="input-group">
         <div class="input-group-addon">
-          <span class="input-group-text">Comment</span>
+          <span class="input-group-text input-fields comment">Comment</span>
         </div>
         <textarea class="form-control" aria-label="With textarea"></textarea>
       </div>
@@ -75,12 +139,27 @@
     <div class="col-sm-6 col-md-6 col-xs-6">
       <div class="input-group mb-3">
         <div class="input-group-btn">
-          <button class="btn btn-outline-success" type="button" (click)="onClickTotal()" >Total</button>
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            (click)="onClickTotal()"
+          >
+            Total
+          </button>
         </div>
-        <input type="text" class="form-control"  [(ngModel)]= "totalAmount" placeholder="" aria-label="Large" aria-describedby="inputGroup-sizing-sm" style="text-align: center;">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="totalAmount"
+          placeholder=""
+          aria-label="Large"
+          aria-describedby="inputGroup-sizing-sm"
+          style="text-align: center"
+        />
       </div>
     </div>
   </div>
 </div>
 
 <!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
+
