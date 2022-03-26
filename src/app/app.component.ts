@@ -8,12 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'invoice-proj';
   rent=0;
-  electricity=0;
   extra=0;
-  pump=0;
+  water=0;
   totalAmount=0;
+  newUnits=0;
+  currentUnits=0;
+  unitRate=0;
+  sweeperAmount=0;
+  electricity=0;
 
   onClickTotal(){
-    this.totalAmount=this.rent+this.electricity+this.pump+this.extra;
+    this.electricity=(this.newUnits-this.currentUnits)*this.unitRate;
+    this.totalAmount=this.rent+this.electricity+this.water+this.extra+this.sweeperAmount;
   }
 }
